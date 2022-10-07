@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1009.0" styleClass="gradient-background" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hopeitworks.HelloController">
+   <top>
+      <HBox alignment="BOTTOM_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="51.0" prefWidth="1002.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="53.0" prefWidth="214.0" styleClass="shadow" text="Admin Dashboard">
+               <font>
+                  <Font name="Berlin Sans FB" size="20.0" />
+               </font>
+            </Label>
+            <Label alignment="BASELINE_LEFT" contentDisplay="BOTTOM" prefHeight="17.0" prefWidth="199.0" styleClass="container1" text="    Last Updated : 21:55 10/09/22" textFill="#037c7c">
+               <font>
+                  <Font name="Berlin Sans FB" size="14.0" />
+               </font>
+            </Label>
+            <HBox prefHeight="51.0" prefWidth="555.0" />
+            <ImageView fitHeight="60.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/person@2x.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+   </top>
+   <left>
+      <VBox prefHeight="549.0" prefWidth="206.0" styleClass="container" stylesheets="@styles.css" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="212.0" styleClass="container" stylesheets="@styles.css">
+               <children>
+                  <ImageView fitHeight="38.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true" styleClass="shadow">
+                     <image>
+                        <Image url="@../../../images/person.png" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="41.0" prefWidth="143.0" styleClass="shadow" stylesheets="@styles.css" text="   Kainaat Zaidi">
+                     <font>
+                        <Font name="Berlin Sans FB" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <Label prefHeight="17.0" prefWidth="218.0" styleClass="line-color" stylesheets="@styles.css" text="    --------------------------------------" />
+            <VBox prefHeight="419.0" prefWidth="207.0" styleClass="container" stylesheets="@styles.css">
+               <children>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" prefHeight="80.0" prefWidth="206.0" styleClass="line-color" stylesheets="@styles.css">
+                     <children>
+                        <ImageView fitHeight="35.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true" styleClass="shadow">
+                           <image>
+                              <Image url="@../../../images/chart_bar.png" />
+                           </image>
+                        </ImageView>
+                        <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="145.0" styleClass="line-color" stylesheets="@styles.css" text="Dashboard" textFill="#037c7c">
+                           <font>
+                              <Font name="Book Antiqua" size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" prefHeight="80.0" prefWidth="206.0" styleClass="line-color" stylesheets="@styles.css">
+                     <children>
+                        <ImageView fitHeight="35.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true" styleClass="shadow">
+                           <image>
+                              <Image url="@../../../images/observation.png" />
+                           </image>
+                        </ImageView>
+                        <Button mnemonicParsing="false" onAction="#onBedInfoButtonClick" prefHeight="35.0" prefWidth="145.0" styleClass="line-color" stylesheets="@styles.css" text="Bed Info" textFill="#037c7c">
+                           <font>
+                              <Font name="Book Antiqua" size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" prefHeight="80.0" prefWidth="206.0" styleClass="line-color" stylesheets="@styles.css">
+                     <children>
+                        <ImageView fitHeight="35.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" styleClass="shadow">
+                           <image>
+                              <Image url="@../../../images/health_worker_form%20(1).png" />
+                           </image>
+                        </ImageView>
+                        <Button mnemonicParsing="false" onAction="#onPatientInfoButtonClick" prefHeight="35.0" prefWidth="145.0" styleClass="line-color" stylesheets="@styles.css" text="Patient's Info" textFill="#037c7c">
+                           <font>
+                              <Font name="Book Antiqua" size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" prefHeight="80.0" prefWidth="206.0" styleClass="line-color" stylesheets="@styles.css">
+                     <children>
+                        <ImageView fitHeight="35.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true" styleClass="shadow">
+                           <image>
+                              <Image url="@../../../images/money_bag.png" />
+                           </image>
+                        </ImageView>
+                        <Button mnemonicParsing="false" onAction="#onRevenueButtonClick" prefHeight="35.0" prefWidth="145.0" styleClass="line-color" stylesheets="@styles.css" text="Revenue" textFill="#037c7c">
+                           <font>
+                              <Font name="Book Antiqua" size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="552.0" prefWidth="527.0" spacing="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <Accordion />
+          <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="123.0" prefWidth="520.0">
+               <children>
+                  <HBox layoutX="-1.0" layoutY="-7.0" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="65.0" prefWidth="501.0" spacing="20.0" styleClass="container" stylesheets="@styles.css">
+                     <children>
+                        <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="66.0" prefWidth="256.0" styleClass="shadow" text="  Total Admitted Patients " textFill="TEAL">
+                           <font>
+                              <Font name="Book Antiqua" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="214.0" styleClass="shadow" text="Total Nurses :" textFill="TEAL">
+                           <font>
+                              <Font name="Book Antiqua" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <opaqueInsets>
+                        <Insets bottom="20.0" />
+                     </opaqueInsets>
+                  </HBox>
+                  <HBox layoutX="-1.0" layoutY="57.0" prefHeight="61.0" prefWidth="501.0" styleClass="container" stylesheets="@styles.css">
+                     <children>
+                        <ImageView fitHeight="51.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../images/man.png" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="61.0" prefWidth="89.0" styleClass="shadow" stylesheets="@styles.css" text=" : 784" textFill="TEAL">
+                           <font>
+                              <Font name="Book Antiqua Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="176.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="61.0" prefWidth="204.0" styleClass="shadow" stylesheets="@styles.css" text="   ">
+                           <font>
+                              <Font name="Book Antiqua Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="51.0" fitWidth="59.0" layoutX="125.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../images/nurse.png" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="CENTER" layoutX="176.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="61.0" prefWidth="46.0" styleClass="shadow" stylesheets="@styles.css" text=" : 612" textFill="TEAL">
+                           <font>
+                              <Font name="Book Antiqua Bold" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+               <opaqueInsets>
+                  <Insets bottom="50.0" />
+               </opaqueInsets>
+            </AnchorPane>
+            <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="33.0" prefWidth="550.0">
+               <children>
+                  <Label prefHeight="59.0" prefWidth="550.0" styleClass="container1" stylesheets="@styles.css" textFill="#66b2b2">
+                     <font>
+                        <Font name="Berlin Sans FB" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <BarChart maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="343.0" prefWidth="500.0" stylesheets="@styles.css" title="Bed Occupancy">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+            </BarChart>
+         </children>
+         <padding>
+            <Insets left="15.0" />
+         </padding>
+      </VBox>
+   </center>
+   <right>
+      <VBox alignment="TOP_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="551.0" prefWidth="260.0" spacing="10.0" styleClass="shadow" stylesheets="@styles.css" BorderPane.alignment="CENTER_LEFT">
+         <children>
+            <TextField prefHeight="31.0" prefWidth="260.0" text="Search  Bar">
+               <font>
+                  <Font name="Book Antiqua" size="12.0" />
+               </font>
+            </TextField>
+            <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="503.0" prefWidth="260.0">
+               <children>
+                  <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="43.0" prefWidth="260.0">
+                     <children>
+                        <DatePicker prefHeight="25.0" prefWidth="262.0" />
+                     </children>
+                  </HBox>
+                  <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="104.0" prefWidth="260.0" />
+                  <HBox layoutX="10.0" layoutY="252.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="389.0" prefWidth="260.0">
+                     <children>
+                        <LineChart maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="324.0" prefWidth="260.0" title="Current Bed Occupancy Rate">
+                           <xAxis>
+                              <CategoryAxis prefHeight="0.0" prefWidth="203.0" side="BOTTOM" />
+                           </xAxis>
+                           <yAxis>
+                              <NumberAxis side="LEFT" />
+                           </yAxis>
+                        </LineChart>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+         <opaqueInsets>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </opaqueInsets>
+         <padding>
+            <Insets bottom="10.0" />
+         </padding>
+      </VBox>
+   </right>
+</BorderPane>
