@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1009.0" styleClass="gradient-background" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hopeitworks.HelloController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1009.0" styleClass="gradient-background" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hopeitworks.logincontroller">
    <top>
       <HBox alignment="BOTTOM_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="51.0" prefWidth="1002.0" BorderPane.alignment="CENTER">
          <children>
@@ -32,75 +32,76 @@
       </HBox>
    </top>
    <left>
-      <VBox prefHeight="549.0" prefWidth="206.0" styleClass="container" stylesheets="@../IdeaProjects/primary1/src/main/resources/styles.css" BorderPane.alignment="CENTER">
+      <VBox prefHeight="549.0" prefWidth="206.0" styleClass="container" stylesheets="@styles.css" BorderPane.alignment="CENTER">
          <children>
-            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="212.0" styleClass="container" stylesheets="@../IdeaProjects/primary1/src/main/resources/styles.css">
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="212.0" styleClass="container" stylesheets="@styles.css">
                <children>
                   <ImageView fitHeight="38.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true" styleClass="shadow">
                      <image>
                         <Image url="@../../../images/person.png" />
                      </image>
                   </ImageView>
-                  <Label prefHeight="41.0" prefWidth="143.0" styleClass="shadow" stylesheets="@../IdeaProjects/primary1/src/main/resources/styles.css" text="   Kainaat Zaidi">
+                  <Label prefHeight="41.0" prefWidth="143.0" styleClass="shadow" stylesheets="@styles.css" text="   Kainaat Zaidi">
                      <font>
                         <Font name="Berlin Sans FB" size="18.0" />
                      </font>
                   </Label>
                </children>
             </HBox>
-            <Label prefHeight="17.0" prefWidth="218.0" styleClass="line-color" stylesheets="@../IdeaProjects/primary1/src/main/resources/styles.css" text="    --------------------------------------" />
-            <VBox prefHeight="419.0" prefWidth="207.0" styleClass="container" stylesheets="@../IdeaProjects/primary1/src/main/resources/styles.css">
+            <Label prefHeight="17.0" prefWidth="218.0" styleClass="line-color" stylesheets="@styles.css" text="    --------------------------------------" />
+            <VBox prefHeight="419.0" prefWidth="207.0" styleClass="container" stylesheets="@styles.css">
                <children>
-                  <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" prefHeight="80.0" prefWidth="206.0" styleClass="line-color" stylesheets="@../IdeaProjects/primary1/src/main/resources/styles.css">
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" prefHeight="80.0" prefWidth="206.0" styleClass="line-color" stylesheets="@styles.css">
                      <children>
                         <ImageView fitHeight="35.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true" styleClass="shadow">
                            <image>
                               <Image url="@../../../images/chart_bar.png" />
                            </image>
                         </ImageView>
-                        <Button mnemonicParsing="false" onAction="#onDashboardButtonClick" prefHeight="35.0" prefWidth="145.0" styleClass="line-color" stylesheets="@../IdeaProjects/primary1/src/main/resources/styles.css" text="Dashboard" textFill="#037c7c">
+                        <Button mnemonicParsing="false" onAction="#Dashboard" prefHeight="35.0" prefWidth="145.0" styleClass="line-color" stylesheets="@styles.css" text="Dashboard" textFill="#037c7c">
                            <font>
                               <Font name="Book Antiqua" size="18.0" />
                            </font>
                         </Button>
                      </children>
                   </HBox>
-                  <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" prefHeight="80.0" prefWidth="206.0" styleClass="line-color" stylesheets="@../IdeaProjects/primary1/src/main/resources/styles.css">
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" prefHeight="80.0" prefWidth="206.0" styleClass="line-color" stylesheets="@styles.css">
                      <children>
                         <ImageView fitHeight="35.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true" styleClass="shadow">
                            <image>
                               <Image url="@../../../images/observation.png" />
                            </image>
                         </ImageView>
-                        <Button mnemonicParsing="false" onAction="#onBedInfoButtonClick" prefHeight="35.0" prefWidth="145.0" styleClass="line-color" stylesheets="@../IdeaProjects/primary1/src/main/resources/styles.css" text="Bed Info" textFill="#037c7c">
+                        <Button mnemonicParsing="false" onAction="#bedinfo" prefHeight="35.0" prefWidth="145.0" styleClass="line-color" stylesheets="@styles.css" text="Bed Info" textFill="#037c7c">
                            <font>
                               <Font name="Book Antiqua" size="18.0" />
                            </font>
                         </Button>
                      </children>
                   </HBox>
-                  <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" prefHeight="80.0" prefWidth="206.0" styleClass="line-color" stylesheets="@../IdeaProjects/primary1/src/main/resources/styles.css">
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" prefHeight="80.0" prefWidth="206.0" styleClass="line-color" stylesheets="@styles.css">
                      <children>
                         <ImageView fitHeight="35.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" styleClass="shadow">
                            <image>
                               <Image url="@../../../images/health_worker_form%20(1).png" />
                            </image>
                         </ImageView>
-                        <Button mnemonicParsing="false" onAction="#onPatientInfoButtonClick" prefHeight="35.0" prefWidth="145.0" styleClass="line-color" stylesheets="@../IdeaProjects/primary1/src/main/resources/styles.css" text="Patient's Info" textFill="#037c7c">
+                        <Button mnemonicParsing="false" onAction="#Patientinfo" prefHeight="35.0" prefWidth="145.0" styleClass="line-color" stylesheets="@styles.css" text="Patient's Info" textFill="#037c7c">
                            <font>
                               <Font name="Book Antiqua" size="18.0" />
                            </font>
                         </Button>
                      </children>
                   </HBox>
-                  <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" prefHeight="80.0" prefWidth="206.0" styleClass="line-color" stylesheets="@../IdeaProjects/primary1/src/main/resources/styles.css">
+                  <HBox prefHeight="129.0" prefWidth="206.0" />
+                  <HBox alignment="CENTER" maxHeight="-Infinity" prefHeight="48.0" prefWidth="206.0" styleClass="line-color" stylesheets="@styles.css">
                      <children>
-                        <ImageView fitHeight="35.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true" styleClass="shadow">
+                        <ImageView fitHeight="24.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" styleClass="shadow">
                            <image>
-                              <Image url="@../../../images/money_bag.png" />
+                              <Image url="@../../../images/icons8-logout-64.png" />
                            </image>
                         </ImageView>
-                        <Button mnemonicParsing="false" onAction="#onRevenueButtonClick" prefHeight="35.0" prefWidth="145.0" styleClass="line-color" stylesheets="@../IdeaProjects/primary1/src/main/resources/styles.css" text="Revenue" textFill="#037c7c">
+                        <Button mnemonicParsing="false" onAction="#Logout" prefHeight="35.0" prefWidth="145.0" styleClass="line-color" stylesheets="@styles.css" text="Logout" textFill="#037c7c">
                            <font>
                               <Font name="Book Antiqua" size="18.0" />
                            </font>
@@ -113,7 +114,7 @@
       </VBox>
    </left>
    <right>
-      <VBox alignment="TOP_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="551.0" prefWidth="226.0" spacing="10.0" styleClass="shadow" stylesheets="@../IdeaProjects/primary1/src/main/resources/styles.css" BorderPane.alignment="CENTER_LEFT">
+      <VBox alignment="TOP_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="551.0" prefWidth="226.0" spacing="10.0" styleClass="shadow" stylesheets="@styles.css" BorderPane.alignment="CENTER_LEFT">
          <children>
             <TextField prefHeight="28.0" prefWidth="226.0" text="Search  Bar">
                <font>
@@ -121,19 +122,9 @@
                </font>
             </TextField>
             <HBox prefHeight="28.0" prefWidth="226.0" />
-            <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="174.0" prefWidth="219.0" spacing="10.0">
+            <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="174.0" prefWidth="219.0" spacing="10.0">
                <children>
-                  <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onEnrollNewButtonClick" prefHeight="43.0" prefWidth="220.0" styleClass="container" text="Enroll New Patient" textFill="#037c7c">
-                     <font>
-                        <Font name="Berlin Sans FB" size="14.0" />
-                     </font>
-                  </Button>
-                  <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="244.0" styleClass="container" text="Edit Information" textFill="#037c7c">
-                     <font>
-                        <Font name="Berlin Sans FB" size="14.0" />
-                     </font>
-                  </Button>
-                  <Button layoutX="10.0" layoutY="53.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="244.0" styleClass="container" text="Filter" textFill="#037c7c">
+                  <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="43.0" prefWidth="220.0" styleClass="container" stylesheets="@styles.css" text="Enroll New Patient" textFill="#037c7c">
                      <font>
                         <Font name="Berlin Sans FB" size="14.0" />
                      </font>
@@ -209,9 +200,8 @@
    <center>
       <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="479.0" prefWidth="549.0" BorderPane.alignment="CENTER">
          <children>
-            <TableView maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="481.0" prefWidth="551.0" styleClass="container1">
+            <TableView maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="481.0" prefWidth="506.0" styleClass="container1">
               <columns>
-                <TableColumn prefWidth="45.0" text="Sr.No" />
                 <TableColumn prefWidth="75.0" text="Patient's ID" />
                   <TableColumn prefWidth="136.0" text="Patient Name" />
                   <TableColumn prefWidth="94.0" text="Nurse Assigned" />
