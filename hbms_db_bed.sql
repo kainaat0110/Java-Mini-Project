@@ -23,13 +23,13 @@ DROP TABLE IF EXISTS `bed`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `bed` (
-  `b_id` int(11) NOT NULL AUTO_INCREMENT,
-  `b_outofservice` tinyint(4) DEFAULT NULL,
-  `b_occupancy` tinyint(4) DEFAULT NULL,
+  `b_id` int(11) NOT NULL,
+  `b_occupancy` tinyint(4) NOT NULL,
+  `r_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`b_id`),
-  UNIQUE KEY `b_id_UNIQUE` (`b_id`),
-  CONSTRAINT `bed_idfk_1` FOREIGN KEY (`b_id`) REFERENCES `patient` (`p_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
+  KEY `r_id_idx` (`r_id`),
+  CONSTRAINT `r_id` FOREIGN KEY (`r_id`) REFERENCES `room` (`r_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -38,7 +38,7 @@ CREATE TABLE `bed` (
 
 LOCK TABLES `bed` WRITE;
 /*!40000 ALTER TABLE `bed` DISABLE KEYS */;
-INSERT INTO `bed` VALUES (1,0,1),(2,0,0),(3,0,1),(4,0,1),(5,0,1),(6,1,0),(7,0,0),(8,0,0),(9,0,1),(10,0,0);
+INSERT INTO `bed` VALUES (1,0,1),(2,1,1),(3,1,2),(4,1,2),(5,0,3),(6,0,3),(7,1,4),(8,1,5),(9,1,6),(10,0,7),(11,0,8);
 /*!40000 ALTER TABLE `bed` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -51,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-10-02 21:13:34
+-- Dump completed on 2022-10-28 23:37:40
